@@ -1,21 +1,13 @@
-<div class="container index">
+
+  <div class="container">
   <h1>All our flats </h1>
   <p>All <%= Flat.count %> flats.</p>
-  <div class="row">
 
-    <% @flats.each do |flat| %>
-      <div class="col-md-4">
-        <div class="card-all">
-          <h2> <%= flat.name %></h2>
-          <%= flat.description %>
-          <%= flat.address %>
-          <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
-           R$<%= flat.price_per_night %>
-        </div>
-      </div>
-    <% end %>
-
+    <div class="cards">
+      <% @flats.each do |flat| %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?room)">
+            <%= flat.name %>
+          </div>
+      <% end %>
+    </div>
   </div>
-
-
-</div>
