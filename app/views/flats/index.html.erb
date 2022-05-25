@@ -1,11 +1,14 @@
-<div class="container">
+<div class="container index">
   <h1>All our flats </h1>
   <p>All <%= Flat.count %> flats.</p>
-  <ul>
-    <% @flats.each do |flat| %>
-      <li><%= link_to flat.name, flat_path(flat) %></li>
-    <% end %>
-  </ul>
-<i class="fa-solid fa-user-group"></i>
-<i class="fa-regular fa-brazilian-real-sign"></i>
+  <div class="row">
+    <ul>
+      <% @flats.each do |flat| %>
+        <li><%= link_to flat.name, flat_path(flat) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+<i class="fas fa-user-friends"></i>
+
 </div>
