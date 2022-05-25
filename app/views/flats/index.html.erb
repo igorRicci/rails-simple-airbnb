@@ -4,11 +4,16 @@
   <div class="row">
     <ul>
       <% @flats.each do |flat| %>
-        <li><%= link_to flat.name, flat_path(flat) %></li>
+        <div class="card">
+          <li><h2> <%= flat.name %></h2></li>
+          <li><%= flat.description %></li>
+          <li><%= flat.address %></li>
+          <li><i class="fas fa-user-friends"></i> <%= flat.number_of_guests %></li>
+          <li> R$<%= flat.price_per_night %></li>
+        </div>
       <% end %>
     </ul>
   </div>
 
-<i class="fas fa-user-friends"></i>
 
 </div>
